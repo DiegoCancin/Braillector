@@ -1,0 +1,110 @@
+.upgrade-plan-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+    background: linear-gradient(145deg, #ffffff, #f3f3f3);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+    width: 50%; /* Hacemos el logo más grande */
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.plan-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.plan-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #fdfdfd;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    transform: scale(1);
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.plan-card h3 {
+    font-size: 1.6rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.plan-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.plan-card .price {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.plan-card.standard {
+    border: 2px solid #007bff;
+    background: linear-gradient(145deg, #e7f1ff, #ffffff);
+}
+
+.plan-card.premium {
+    border: 2px solid #ffc107;
+    background: linear-gradient(145deg, #fff7d1, #fff3ba);
+}
+
+.premium h3 {
+    color: #ff9f00;
+}
+
+.back-button-container {
+    margin-top: 60px; /* Aumenta el margen superior */
+    text-align: center; /* Centra el botón horizontalmente */
+}
+
+#btnRegresar {
+    background-color: #dc3545; /* Rojo sólido */
+    color: white;
+    padding: 10px 25px; /* Tamaño adecuado */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    font-weight: bold; /* Fuente en negrita */
+    cursor: pointer;
+
+    &:hover {
+        background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+    }
+
+    &:disabled {
+        background-color: #ccc; /* Gris si está deshabilitado */
+        cursor: not-allowed;
+    }
+}
+
+

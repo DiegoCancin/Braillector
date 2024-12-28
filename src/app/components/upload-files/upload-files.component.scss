@@ -1,0 +1,86 @@
+.red-button-upload {
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.red-button-upload:hover {
+    background-color: #ff4c4c;
+}
+
+.green-button-upload {
+    background-color: #66bb6a;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.green-button-upload:hover {
+    background-color: #57a05a;
+}
+
+.font-upload {
+    font-size: 1.5rem !important;
+    color: #545052 !important;
+    font-weight: lighter !important;
+}
+
+.progress {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.4s;
+}
+.content-upload-file {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 100%; /* Limita el ancho al contenedor padre */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido es demasiado grande */
+}
+
+.font-upload-file.nombre {
+    width: 30%;
+}
+
+.font-upload-file.tamano {
+    width: 15%;
+}
+
+.font-upload-file.progreso {
+    width: 20%;
+}
+
+.font-upload-file.estatus {
+    width: 15%;
+}
+
+.font-upload-file.acciones {
+    width: 20%;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: 2px solid #545052;
+}
+
+tbody {
+    border-bottom: 1px solid #545052;
+}
+
+:host {
+    --mdc-linear-progress-track-height: 16px;
+    --mdc-linear-progress-active-indicator-height: 16px;
+}

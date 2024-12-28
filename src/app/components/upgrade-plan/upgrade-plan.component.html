@@ -1,0 +1,29 @@
+<div class="upgrade-plan-container">
+    <!-- Logo en lugar del título -->
+    <div class="header">
+        <img src="/img.png" alt="Braillector logo" class="logo"/>
+        <h2>¡Actualiza tu experiencia!</h2>
+        <p>Selecciona un plan y aprovecha al máximo nuestras funcionalidades.</p>
+    </div>
+
+    <!-- Opciones de planes -->
+    <div class="plan-options">
+        <mat-card class="plan-card standard" (click)="selectPlan('Standard')">
+            <h3>Plan Estándar</h3>
+            <p>✔ Conversiones manuales ilimitadas.</p>
+            <p>✔ Hasta <strong>5 documentos diarios</strong>.</p>
+            <p class="price"><strong>$9.99/mes</strong></p>
+        </mat-card>
+        <mat-card class="plan-card premium" (click)="selectPlan('Premium')">
+            <h3>Plan Premium</h3>
+            <p>✔ Todo ilimitado: conversiones manuales y documentos.</p>
+            <p>✔ Soporte prioritario.</p>
+            <p class="price"><strong>$19.99/mes</strong></p>
+        </mat-card>
+    </div>
+
+    <div class="back-button-container">
+        <button id="btnRegresar" (click)="goBack()">Regresar</button>
+    </div>
+
+</div>

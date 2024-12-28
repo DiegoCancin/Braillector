@@ -1,0 +1,58 @@
+<div class="register-container">
+    <mat-card class="register-card">
+        <!-- Logo y título -->
+        <div class="register-header">
+            <img src="/img.png" alt="Braillector Logo" class="logo" />
+            <h2>Crear cuenta.</h2>
+        </div>
+
+        <!-- Botón de Google -->
+        <button mat-flat-button color="primary" class="google-btn">
+            <img src="/img_1.png" alt="Google Icon" class="google-icon" />
+            Google
+        </button>
+
+        <!-- Formulario de registro -->
+        <form [formGroup]="registerForm">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <mat-icon matPrefix>person</mat-icon>
+                <input matInput placeholder="Nombre" formControlName="firstName" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Apellido paterno</mat-label>
+                <mat-icon matPrefix>badge</mat-icon>
+                <input matInput placeholder="Apellido paterno" formControlName="paLastName" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Apellido materno</mat-label>
+                <mat-icon matPrefix>badge</mat-icon>
+                <input matInput placeholder="Apellido materno" formControlName="maLastName" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <mat-icon matPrefix>mail</mat-icon>
+                <input matInput placeholder="Email" type="email" formControlName="email" required />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Contraseña</mat-label>
+                <mat-icon matPrefix>lock</mat-icon>
+                <input matInput placeholder="Contraseña" type="password" formControlName="password" required />
+            </mat-form-field>
+
+            <!-- Botón de registro -->
+            <button mat-raised-button color="primary" class="register-btn" (click)="registerUsr()">
+                Registro
+            </button>
+        </form>
+
+        <!-- Enlace para iniciar sesión si ya está registrado -->
+        <p class="already-registered">
+            ¿Ya estás registrado? <a routerLink="/login">Acceder</a>
+        </p>
+    </mat-card>
+</div>

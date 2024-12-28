@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <button *ngIf="showMenu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu-button">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            Cerrar sesión
+        </button>
+    </mat-menu>
+
+    <img src="/img.png" alt="Braillector logo" class="logo"/>
+
+    <span class="example-spacer"></span>
+
+    <button mat-raised-button *ngIf="isButtonVisible" color="primary" routerLink="/login">
+        Iniciar sesión
+    </button>
+</mat-toolbar>

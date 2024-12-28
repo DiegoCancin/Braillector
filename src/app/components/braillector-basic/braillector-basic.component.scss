@@ -1,0 +1,124 @@
+// Estilo para el contenedor principal
+.margin-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 88vh; // Ocupa el 80% de la pantalla en altura
+    width: 97%; // Ocupa todo el ancho disponible
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Sombra ligera para el contenedor
+    margin: 0 auto;
+}
+
+// Estilo para el campo de texto
+.txt-normal {
+    width: 80%; // Asegura que el campo de texto ocupe el 80% del ancho disponible
+    margin-bottom: 20px;
+}
+
+mat-form-field {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 5px;
+}
+
+// Contenedor para los botones alineados horizontalmente
+.buttons-container {
+    display: flex;
+    justify-content: center; // Alinea los botones horizontalmente
+    gap: 20px; // Espacio entre los botones
+    margin-top: 20px;
+    width: 80%; // Asegura que ocupe el mismo ancho que el campo de texto
+}
+
+// Estilo para el botón de convertir
+#btnConvertir, #btnLimpiar {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+}
+
+#btnConvertir {
+    background-color: #007bff;
+    color: white;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+}
+
+// Estilo para el botón de limpiar
+#btnLimpiar {
+    background-color: #dc3545;
+    color: white;
+
+    &:hover {
+        background-color: #c82333;
+    }
+
+    &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+}
+
+// Estilo para el mat-card donde se muestra el resultado
+mat-form-field {
+    width: 80%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Contenedor para el botón de mejora del plan
+.upgrade-container {
+    margin-top: 40px; // Aumenta la distancia del botón hacia abajo
+    display: flex;
+    justify-content: center; // Centra el botón horizontalmente
+    width: 80%; // Mantiene el ancho del diseño
+}
+
+// Estilo para el botón de mejorar plan
+.upgrade-container button {
+    background-color: #ffc107; // Color llamativo (amarillo)
+    color: #212529; // Contraste con el texto
+    font-size: 1.2rem; // Aumenta el tamaño de la fuente para llamar la atención
+    padding: 12px 24px; // Tamaño más grande para destacar
+    border: none;
+    border-radius: 8px; // Mantén las esquinas redondeadas
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); // Sombra más marcada para resaltar
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #e0a800; // Oscurece el amarillo para un efecto de hover
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Aumenta la sombra al pasar el cursor
+        transform: translateY(-2px); // Efecto de levantar el botón
+    }
+
+    &:active {
+        background-color: #d39e00; // Color aún más oscuro al presionar
+        transform: translateY(0); // Restablece el botón
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Reduce la sombra al presionar
+    }
+}

@@ -1,0 +1,32 @@
+<div class="login-container">
+    <mat-card class="login-card">
+        <img src="/img.png" alt="Braillector logo" class="logo" />
+        <h2>Acceder a mi cuenta.</h2>
+        <button mat-flat-button color="primary" class="google-btn">
+            <img src="/img_1.png" alt="Google Icon" class="googleIcon" />
+            Google
+        </button>
+        <form [formGroup]="loginForm">
+            <mat-form-field appearance="outline">
+                <mat-icon matPrefix>mail</mat-icon>
+                <mat-label>Introduce tu email</mat-label>
+                <input matInput type="email" name="email" required class="form-control" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-icon matPrefix>lock</mat-icon>
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" name="password" required class="form-control" formControlName="password">
+            </mat-form-field>
+
+            <a class="forgot-password">¿No estas registrado?</a>
+
+            <a routerLink="/register" class="forgot-password1">Registrarse</a>
+
+            <button mat-flat-button color="primary" type="submit" class="submit-btn" (click)="login()">
+                Acceder
+            </button>
+        </form>
+    </mat-card>
+</div>
+

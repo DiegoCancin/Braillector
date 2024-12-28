@@ -1,0 +1,124 @@
+/* Contenedor principal del registro */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 92vh; /* Ocupa toda la pantalla */
+    background-color: #f0f0f0;
+    padding: 0; /* Quitar padding */
+}
+
+/* Cuadro detrás del formulario */
+.register-card {
+    background-color: white;
+    padding: 20px; /* Reducir padding */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 350px; /* Limitar aún más el ancho */
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
+}
+
+/* Estilo para el logo y título */
+.register-header {
+    margin-bottom: 10px; /* Reducir margen inferior */
+
+    .logo {
+        width: 150px; /* Reducir tamaño del logo */
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.4rem; /* Reducir tamaño de fuente */
+        color: #333;
+    }
+}
+
+/* Botón de Google */
+.google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #757575;
+    width: 100%;
+    margin-bottom: 10px; /* Reducir margen inferior */
+    border: 1px solid #dcdcdc;
+    border-radius: 50px;
+    padding: 8px 10px; /* Reducir padding */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Estilo para el formulario */
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 10px; /* Reducir margen entre campos */
+}
+
+mat-form-field {
+    background-color: #f0f8e8; /* Color de fondo suave para los campos de texto */
+    border-radius: 8px;
+    padding: 5px; /* Reducir padding interno */
+}
+
+.register-btn {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 8px; /* Reducir padding */
+    font-size: 1rem; /* Reducir tamaño de fuente */
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+/* Enlaces debajo del formulario */
+.already-registered {
+    margin-top: 10px; /* Reducir margen superior */
+    font-size: 0.9rem;
+
+    a {
+        text-decoration: none;
+        color: #007bff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .register-card {
+        padding: 10px; /* Reducir padding en pantallas pequeñas */
+        max-width: 95%;
+    }
+
+    .logo {
+        width: 140px; /* Reducir el tamaño del logo en pantallas pequeñas */
+    }
+
+    .google-btn {
+        padding: 5px 10px; /* Reducir padding del botón de Google */
+    }
+
+    .register-btn {
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+        padding: 7px;
+    }
+}

@@ -1,0 +1,74 @@
+<div class="font-upload content-upload-file">
+    <div>
+        Selecciona tu archivo:
+        <button mat-icon-button color="accent" (click)="fileInput.click()"
+                [disabled]="(userType != 3 && (countConversions >= 5 || countConversions == -1))"
+        >
+            <mat-icon>upload</mat-icon>
+        </button>
+        <input
+            type="file"
+            #fileInput
+            ng2FileSelect
+            [uploader]="uploader"
+            style="display: none"
+            single
+        />
+    </div>
+    <br>
+    <br>
+    <div>
+        <table class="content-upload-file" *ngIf="uploader.queue.length > 0">
+            <thead>
+                <tr>
+                    <th class="font-upload-file nombre"><strong>Nombre</strong></th>
+                    <th class="font-upload-file tamano"><strong>Tamaño</strong></th>
+                    <th class="font-upload-file progreso"><strong>Progreso</strong></th>
+                    <th class="font-upload-file estatus"><strong>Estatus</strong></th>
+                    <th class="font-upload-file acciones"><strong>Acciones</strong></th>
+                </tr>
+                <br>
+            </thead>
+            <tbody>
+                <br>
+                <tr *ngFor="let item of uploader.queue">
+                    <td>{{ item?.file?.name ?? '' | truncateFileName: 12 }}</td>
+                    <td *ngIf="uploader.options.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+                    <td *ngIf="uploader.options.isHTML5">
+                        <span>{{ item.progress + '%' }}</span>
+                    </td>
+                    <td class="text-center">
+                        <span *ngIf="item.isSuccess"><i class="glyphicon glyphicon-ok"> OK</i></span>
+                        <span *ngIf="item.isCancel"><i class="glyphicon glyphicon-ban-circle">CANCELADO</i></span>
+                        <span *ngIf="item.isError"><i class="glyphicon glyphicon-remove"></i>ERROR</span>
+                    </td>
+                    <td nowrap >
+                        <button
+                            mat-fab
+                            aria-label="subir archivo"
+                            (click)="item.upload(); registerConversions()"
+                            [disabled]="item.isReady || item.isUploading || item.isSuccess || (userType != 3 && countConversions >= 5)"
+                            [ngStyle]="{'margin-right': '10px'}"
+                            [ngClass]="'green-button-upload'"
+                        >
+                            <mat-icon>cloud_upload</mat-icon>
+                        </button>
+                        <button
+                            mat-fab
+                            aria-label="eliminar archivo"
+                            (click)="item.remove()"
+                            [ngClass]="'red-button-upload'"
+                        >
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                <br>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div *ngIf="uploader.queue.length > 0">
+        <mat-progress-bar [color]="'accent'" mode="determinate" [value]="uploader.progress"></mat-progress-bar>
+    </div>
+</div>

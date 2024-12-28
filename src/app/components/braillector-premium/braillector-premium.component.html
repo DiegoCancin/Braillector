@@ -1,0 +1,36 @@
+<div class="braillector-window">
+    <mat-card class="card-container">
+        <img src="/img.png" alt="Braillector logo" class="logo"/>
+
+        <mat-card-subtitle>¡Bienvenido! <br> Ingresa el texto a traducir a Braille.</mat-card-subtitle>
+
+        <div class="textarea-container">
+            <mat-form-field appearance="outline" class="text-input">
+                <mat-label>Texto a traducir</mat-label>
+                <textarea matInput placeholder="Sin límite de caracteres..." #message></textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="text-input">
+                <mat-label>Texto en Braille</mat-label>
+                <textarea matInput #res placeholder="Texto en Braille" readonly></textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="buttons-container">
+            <button mat-flat-button color="warn" (click)="message.value = ''; clear()" [disabled]="message.value === ''">
+                Limpiar
+            </button>
+            <button mat-flat-button color="primary" (click)="enviarConversion(message.value)"
+                    [disabled]="message.value === ''">Convertir
+            </button>
+            <button mat-raised-button color="warn" class="action-btn" (click)="copyToClipboard(res.value)"  [disabled]="res.value === ''">
+                Copiar
+            </button>
+        </div>
+
+        <div class="upload-container">
+            <p>Sin limite de documentos</p>
+        </div>
+        <app-upload-files></app-upload-files>
+    </mat-card>
+</div>

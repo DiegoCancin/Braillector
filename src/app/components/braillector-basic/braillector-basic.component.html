@@ -1,0 +1,31 @@
+<div class="margin-main">
+    <mat-form-field class="txt-normal">
+        <mat-label>Mensaje a convertir</mat-label>
+        <textarea matInput #message maxlength="3000" placeholder="Escriba su texto..." required rows="4"></textarea>
+        <mat-hint align="start"><strong>Por favor llene el campo</strong></mat-hint>
+        <mat-hint align="end">{{ message.value.length }} / 3000</mat-hint>
+    </mat-form-field>
+
+    <div class="buttons-container">
+        <button mat-raised-button (click)="enviaConversion(message.value)" id="btnConvertir" type="submit"
+                [disabled]="message.value === ''">
+            Convertir
+        </button>
+        <button mat-raised-button (click)="message.value = ''; clear()" id="btnLimpiar" type="submit"
+                [disabled]="message.value === ''">
+            Limpiar
+        </button>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Texto en Braille</mat-label>
+        <textarea matInput placeholder="Texto en Braille" rows="5" readonly #res></textarea>
+    </mat-form-field>
+
+    <!-- Botón para mejorar el plan (invisible hasta que el contador sea 5) -->
+    <div *ngIf="showUpgrade" class="upgrade-container">
+        <button mat-raised-button color="primary" (click)="mejorarPlan()" routerLink="/upgrade-plan">
+            Mejora tu plan para funciones premium
+        </button>
+    </div>
+</div>

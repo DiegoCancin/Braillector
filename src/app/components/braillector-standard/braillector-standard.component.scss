@@ -1,0 +1,61 @@
+.braillector-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh; /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    padding: 30px;
+    width: 800px; /* Ancho más grande para ocupar más pantalla */
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+.textarea-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.text-input {
+    width: 45%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.buttons-container button {
+    margin: 0 15px;
+    padding: 12px 30px;
+    font-size: 1.2rem; /* Aumenta el tamaño del texto de los botones */
+}
+
+.upload-container {
+    margin-top: 20px;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 100%; /* Limita el ancho al 100% del padre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-container mat-icon-button {
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.upload-container p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #666;
+}
+
